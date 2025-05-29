@@ -1,3 +1,5 @@
+![ETL Pipeline](images/pipeline_design.png)
+
 # reference end to end 
 
 # yt channel https://www.youtube.com/watch?v=3xyoM28B40Y&t=10s
@@ -30,4 +32,4 @@ docker compose logs -f
 
 # to shutdown
 
-docker compose down 
+docker compose down
