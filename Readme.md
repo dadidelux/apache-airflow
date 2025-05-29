@@ -24,6 +24,10 @@ docker compose up -d
 
 docker compose up -d
 
+# check logs 
+
+docker compose logs -f
+
 # to shutdown
 
 docker compose down 

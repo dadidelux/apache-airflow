@@ -1,3 +1,4 @@
 __pychache__
 .venv
 *.log
+*.pyc
