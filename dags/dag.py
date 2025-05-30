@@ -115,14 +115,14 @@ def get_amazon_data_books(num_books, ti, max_pages=3):
     ti.xcom_push(key='book_data', value=df.to_dict('records') if not df.empty else [])
 
 def create_mysql_table_if_not_exists():
-    mysql_hook = MySqlHook(mysql_conn_id='my_mysql') # Ensure 'mysql_default' is your MySQL connection ID in Airflow
+    mysql_hook = MySqlHook(mysql_conn_id='my_mysql')  # Use your MySQL connection ID in Airflow
     create_table_query = """
     CREATE TABLE IF NOT EXISTS books (
+        id INT AUTO_INCREMENT PRIMARY KEY,
         title VARCHAR(255) NOT NULL,
         authors VARCHAR(255),
         price VARCHAR(50),
-        rating VARCHAR(50),
-        PRIMARY KEY (title)
+        rating VARCHAR(50)
     );
     """
     mysql_hook.run(create_table_query)
