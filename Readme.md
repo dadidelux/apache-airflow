@@ -80,7 +80,7 @@
    docker-compose logs -f
    ```
 
-7. **On VPS Server you can check what is live to be hosted **:
+7. **On VPS Server you can check what is live to be hosted**:
    ```bash
    sudo netstat -tuln
    ```
