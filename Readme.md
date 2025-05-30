@@ -53,7 +53,12 @@
    ```bash
    curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.9.1/docker-compose.yaml'
    ```
-
+   
+2. **make sure you have docker in your LINUX**:
+   ```bash
+   sudo apt install docker-compose
+   ```
+   
 2. **Create necessary directories**:
    ```bash
    mkdir -p dags logs plugins config
