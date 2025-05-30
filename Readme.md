@@ -59,28 +59,36 @@
    sudo apt install docker-compose
    ```
    
-2. **Create necessary directories**:
+3. **Create necessary directories**:
    ```bash
    mkdir -p dags logs plugins config
    echo -e "AIRFLOW_UID=$(id -u)" > .env
    ```
 
-3. **Initialize Airflow**:
+4. **Initialize Airflow**:
    ```bash
    docker-compose up airflow-init
    ```
 
-4. **Start Airflow**:
+5. **Start Airflow**:
    ```bash
    docker-compose up -d
    ```
 
-5. **Check logs**:
+6. **Check logs**:
    ```bash
    docker-compose logs -f
    ```
 
-6. **Shut down Airflow**:
+7. **On VPS Server you can check what is live to be hosted **:
+   ```bash
+   sudo netstat -tuln
+   ```
+
+7. **Shut down Airflow**:
    ```bash
    docker-compose down
    ```
+
+
+Note: You can check if your port is accessible here [you get signal](https://www.yougetsignal.com/tools/open-ports/)
